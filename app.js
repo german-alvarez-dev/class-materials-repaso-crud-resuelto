@@ -10,9 +10,7 @@ require('./configs/preprocessor.config')(app)
 require('./configs/locals.config')(app)
 require('./configs/debug.config')
 
-// Base URL's
-app.use('/', require('./routes/index.routes'))
-app.use('/coasters', require('./routes/coaster.routes'))
-app.use('/parks', require('./routes/park.routes'))
+// Routes index
+require('./routes')(app)
 
 module.exports = app
